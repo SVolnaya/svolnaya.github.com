@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Анкета</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+{
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: 'Segoe UI', 'Helvetica','Arial';
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.float-eraser
+{
+    clear: both;
+    height: 0px;
+    display: block;
+}
+
+html
+{
+    height: 100%;
+}
+
+/* =================== Main Layout ======================== */
+body
+{
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.site-content
+{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.site-footer
+{
+    width: 100%;
+    height: 60px;
+    margin-top: -60px;
+    position: absolute;
+    background-color: #2a2a2a;
+    margin-bottom: 0px;
+    padding: 0px;
+    background: -webkit-linear-gradient(#333333, #202020);
+    background: -moz-linear-gradient(top, #333333, #202020);
+    background: -o-linear-gradient(top, #333333, #202020);
+    background: -ms-linear-gradient(top, #333333, #202020);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#202020');
+}
+
+.container
+{
+    width: 980px;
+    margin: 0px auto;
+}
+
+/* ==================== Main Menu ========================== */
+.menu
+{
+    width: 100%;
+    height: 47px;
+    background-color: #000000;
+    background: -webkit-linear-gradient(#181818, #000000);
+    background: -moz-linear-gradient(top, #181818, #000000);
+    background: -o-linear-gradient(top, #181818, #000000);
+    background: -ms-linear-gradient(top, #181818, #000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#181818', endColorstr='#000000');
+    color: #aaaaaa;
+    opacity: 0.9;
+    filter:alpha(opacity=90);
+    position: fixed;
+}
+
+    .menu h3
+    {
+        float: left;
+        display: block;
+        font-size: 16pt;
+        text-shadow: 0px 0px 3px #000000;
+        line-height: 30px;
+        margin-top: 4px;
+        font-weight: normal;
+    }
+
+    .menu ul
+    {
+        float: right;
+        display: block;
+        list-style: none;
+        margin-top: 12px;
+    }
+
+        .menu ul li
+        {
+            float: left;
+            display: block;
+            list-style: none;
+        }
+
+            .menu ul li a
+            {
+                color: #bebebe;
+                font-size: 0.8em;
+                margin-left: 20px;
+                height: 31px;
+                display: block;
+            }
+
+                .menu ul li a:hover
+                {
+                    color: #FFFFFF;
+                    border-bottom: 4px solid #FF0000;
+                }
+
+/* ===================== SECTIONS ======================= */
+
+.container h1
+{
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+/* Info Section */
+.info
+{
+    background-color: #FFFFFF;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+    .info .spacing
+    {
+        width: 100%;
+        height: 60px;
+    }
+
+    .info .container h1
+    {
+        color: #3d3d3d;
+    }
+
+    .info .container p
+    {
+        color: #3d3d3d;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: block;
+        text-align: justify;
+    }
+
+        .info .container p strong
+        {
+            color: #000000;
+            line-height: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .info .container p span
+        {
+            color: #3d3d3d;
+            line-height: 20px;
+            font-size: 0.9em;
+            padding-top: 30px;
+        }
+
+.collage
+{
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+    .collage img
+    {
+        width: 100%;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .collage p
+    {
+        color: #3d3d3d;
+        width: 100%;
+        text-align: center !important;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        display: block;
+    }
+
+/* Portfolio */
+.portfolio
+{
+    background-color: #e4e4e4;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #6a6a6a;
+}
+
+    .portfolio .spacing
+    {
+        width: 100%;
+        height: 30px;
+    }
+
+    .portfolio .container h1
+    {
+        color: #3d3d3d;
+    }
+
+    .portfolio .project
+    {
+        float: left;
+        width: 50%;
+        padding-top: 30px;
+    }
+
+        .portfolio .project img
+        {
+            display: block;
+            width: 70%;
+            height: auto;
+            margin: 0px auto;
+        }
+
+        .portfolio .project img
+        {
+            display: block;
+            width: 70%;
+            height: auto;
+        }
+
+        .portfolio .project a
+        {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            color: #FF0000;
+            padding-bottom: 10px;
+        }
+
+            .portfolio .project a:hover
+            {
+                text-decoration: underline;
+            }
+
+        .portfolio .project p
+        {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em;
+            color: #3d3d3d;
+        }
+/* Questions */
+.questions
+{
+    background-color: #818181;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+    .questions .spacing
+    {
+        width: 100%;
+        height: 30px;
+    }
+
+    .questions .container h1
+    {
+        color: #FFFFFF;
+        padding-bottom: 20px;
+    }
+
+.aq-block
+{
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.q
+{
+    width: 100%;
+    background-color: #515151;
+    color: #FFFFFF;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+}
+
+    .q p
+    {
+        width: 95%;
+        display: block;
+        margin: 0px auto;
+        background-color: #515151;
+        color: #FFFFFF;
+    }
+
+.a
+{
+    width: 95%;
+    color: #FFFFFF;
+    margin: 0px auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+    .a h3
+    {
+        display: block;
+        font-size: 1.3em;
+        padding-bottom: 5px;
+    }
+
+    .a p
+    {
+        display: block;
+        font-size: 0.9em;
+        width: 100%;
+        text-align: justify;
+    }
+
+        .a p a
+        {
+            font-size: 0.9em;
+            color: #ff7a7a;
+        }
+
+            .a p a:hover
+            {
+                text-decoration: underline;
+            }
+
+/* Contacts */
+.contacts
+{
+    background-color: #262626;
+    padding-bottom: 150px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+    .contacts .spacing
+    {
+        width: 100%;
+        height: 30px;
+    }
+
+    .contacts .container h1
+    {
+        color: #FFFFFF;
+        padding-bottom: 20px;
+    }
+
+    .contacts .item
+    {
+        width: 100%;
+        color: #FFFFFF;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+        .contacts .item strong
+        {
+            display: block;
+            width: 200px;
+            font-size: 1.2em;
+            float: left;
+            color: #aaaaaa;
+        }
+
+        .contacts .item span
+        {
+            display: block;
+            width: 40%;
+            font-size: 1.2em;
+            float: left;
+            color: #aaaaaa;
+        }
+
+            .contacts .item span a
+            {
+                color: #FF0000;
+            }
+
+                .contacts .item span a:hover
+                {
+                    text-decoration: underline;
+                }
+/* ==================================== Responsive ====================================== */
+
+@media (min-width: 1200px)
+{
+    .container
+    {
+        width: 980px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px)
+{
+    .container
+    {
+        width: 767px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px)
+{
+    .container
+    {
+        width: 480px;
+    }
+
+    .menu h3
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .container
+    {
+        width: 320px;
+    }
+
+    .menu
+    {
+        width: 100%;
+        height: 123px;
+    }
+
+        .menu .container
+        {
+            width: 100%;
+        }
+
+        .menu h3
+        {
+            display: none;
+        }
+
+        .menu ul
+        {
+            float: none;
+            display: block;
+            list-style: none;
+            margin-top: 0px;
+            list-style-position: inside;
+            clear: both;
+            padding-left: 0px;
+        }
+
+            .menu ul li
+            {
+                float: none;
+                display: block;
+                list-style: none;
+                clear: both;
+                list-style-position: inside !important;
+                border-bottom: 1px solid #222222;
+            }
+
+                .menu ul li a
+                {
+                    color: #bebebe;
+                    font-size: 0.8em;
+                    margin-left: 0px;
+                    height: 25px;
+                    display: block;
+                    padding-top: 5px;
+                    text-align: center;
+                }
+
+                .menu ul li:last-child
+                {
+                    border: none;
+                }
+
+                .menu ul li a:hover
+                {
+                    color: #FFFFFF;
+                    background-color: #FF0000;
+                    height: 25px;
+                    padding-top: 5px;
+                    border: none;
+                }
+
+    .info .spacing
+    {
+        width: 100%;
+        height: 140px;
+    }
+
+    .container h1, .collage p
+    {
+        font-size: 1.0em;
+        text-align: center !important;
+    }
+
+    .container h1
+    {
+        font-weight: bold;
+    }
+
+    .info .container p
+    {
+        color: #3d3d3d;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: block;
+        text-align: justify;
+    }
+
+        .info .container p strong
+        {
+            color: #000000;
+            line-height: 20px;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+
+        .info .container p span
+        {
+            color: #3d3d3d;
+            line-height: 15px;
+            font-size: 0.7em;
+            padding-top: 30px;
+        }
+
+    .portfolio .project a
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.0em;
+        color: #FF0000;
+        padding-bottom: 10px;
+    }
+
+        .portfolio .project a:hover
+        {
+            text-decoration: underline;
+        }
+
+    .portfolio .project p
+    {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
+        font-size: 0.7em;
+        color: #3d3d3d;
+    }
+
+    .contacts .item strong
+    {
+        display: block;
+        width: 150px;
+        font-size: 0.9em;
+        float: left;
+        color: #aaaaaa;
+    }
+
+    .contacts .item span
+    {
+        display: block;
+        width: 40%;
+        font-size: 0.9em;
+        float: left;
+        color: #aaaaaa;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="site-content" id="info">
+        <!-- ==================================== Main Menu ========================================== -->
+        <div class="menu">
+            <div class="container">
+                <h3>Колесникова Светлана Сергеевна</h3>
+                <ul>
+                    <li><a href="#info">Обо мне</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#questions">Ответы на вопросы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <i class="float-eraser"></i>
+            </div>
+        </div>
+        <!-- ==================================== About Me Section =================================== -->
+        <div class="info">
+            <div class="spacing"></div>
+            <div class="container">
+                <h1>Обо мне</h1>
+            </div>
+            <div class="collage">
+                <div class="container">
+                    <img alt="" src="http://imgdisk.ru/images/WBZEO.jpg" />
+                    <p>Колесникова Светлана Сергеевна</p>
+                </div>
+            </div>
+            <div class="container">
+                <p><strong>Дата рождения:</strong><span> 19.08.1990</span></p>
+                <p><strong>Возраст:</strong><span> 22 года</span></p>
+                <p>
+                    <span>С 2005 по 2008 год обучалась в Таганрогском Металлургическом Колледже по специальности 
+                    Документационное обеспечение управления и архивоведение. С 2008 года изучаю Автоматизировные 
+                    системы управления и информации в ТК ЮФУ.</span>
+                </p>
+            </div>
+            <div id="portfolio"></div>
+        </div>
+        <!-- ==================================== Portfolio Section =================================== -->
+        <div class="portfolio">
+            <div class="spacing"></div>
+            <div class="container">
+                <h1>Портфолио</h1>
+                <div class="project">
+                    <img alt="" src="http://imgdisk.ru/images/2p69g.png" />
+                    <a href="http://okbritm.com/" target="_blank">Веб-сайт ОКБ "Ритм"</a>
+                    <p>Мною был разработан веб-сайт ОКБ “Ритм”. В разработке дизайна я участия не принимала.</p>
+                </div>
+                <div class="project">
+                    <img alt="" src="http://imgdisk.ru/images/5OVWP.png" />
+                    <a href="http://imgdisk.ru/images/lfPS.png" target="_blank">Эскиз дизайна</a>
+                    <p>Мною был разработан новый дизайн для сайта ОКБ “Ритм”.</p>
+                </div>
+                <i class="float-eraser"></i>
+            </div>
+            <div id="questions"></div>
+        </div>
+        <!-- ==================================== Questions Section =================================== -->
+        <div class="questions">
+            <div class="spacing"></div>
+            <div class="container">
+                <h1>Ответы на вопросы</h1>
+                <div class="aq-block">
+                    <div class="q">
+                        <p>
+                            1. Какие книги (блоги, курсы) по веб-разработке, дизайну и программированию вы читали в последнее время?
+                        </p>
+                    </div>
+                    <div class="a">
+                        <h3>Ответ:</h3>
+                        <p>
+                            В своей работе в качестве справочника испольую сайт HTMLbook. Так же подчерпываю информацию из таких 
+                            источников как <a href="http://www.mannodesign.com/">http://www.mannodesign.com/</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="aq-block">
+                    <div class="q">
+                        <p>
+                            2. Чему из них научились?
+                        </p>
+                    </div>
+                    <div class="a">
+                        <h3>Ответ:</h3>
+                        <p>
+                            Указанные мной источники помогли мне понять азы верстки HTML\CSS, а также научиться адаптивной верстке
+                        </p>
+                    </div>
+                </div>
+                <div class="aq-block">
+                    <div class="q">
+                        <p>
+                            3. Как у Вас с Английским?
+                        </p>
+                    </div>
+                    <div class="a">
+                        <h3>Ответ:</h3>
+                        <p>
+                            Свободно владею
+                        </p>
+                    </div>
+                </div>
+                <div class="aq-block">
+                    <div class="q">
+                        <p>
+                            4. Чем Вас прельщает Интернет, веб-дизайн и веб-разработка?
+                        </p>
+                    </div>
+                    <div class="a">
+                        <h3>Ответ:</h3>
+                        <p>
+                            Веб-дизайн и верстка являются творческими процессами. А, поскольку, я сама по себе творческая л
+                            ичность - они позволяют достичь гармонии моей душе, получить максимум положительных эмоций, 
+                            позволяют самореализоваться и выплеснуть на “электронный холст” те креативные мысли, которые 
+                            рождаются в моей голове!
+                        </p>
+                    </div>
+                </div>
+            </div>
+             <div id="contacts">
+        </div>
+        <!-- ==================================== Contacts Section =================================== -->
+        <div class="contacts">
+            <div class="spacing"></div>
+            <div class="container">
+                <h1>Контакты</h1>
+                <div class="item">
+                    <strong>Телефон:</strong><span> +7 (918) 541 69 52</span><i class="float-eraser"></i>
+                </div>
+                <div class="item">
+                    <strong>E-mail:</strong><span> <a href="mailto:SVolnaya@gmail.com">SVolnaya@gmail.com</a></span><i class="float-eraser"></i>
+                </div>
+                <div class="item">
+                    <strong>ВКонтакте:</strong><span> <a href="http://vk.com/dark_freedom" target="_blank">http://vk.com/dark_freedom</a></span><i class="float-eraser"></i>
+                </div>
+                <div class="item">
+                    <strong>ICQ:</strong><span> <a href="http://www.icq.com/people/352894489" target="_blank">352894489</a></span><i class="float-eraser"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <div class="container">
+            <a href="http://www.facebook.com/svetlana.volnaya" target="_blank">
+                <img alt="" src="http://imgdisk.ru/images/e96Ux.png" /></a>
+            <a href="http://www.icq.com/people/352894489" target="_blank">
+                <img alt="" src="http://imgdisk.ru/images/eIcPU.png" /></a>
+            <a href="mailto:SVolnaya@gmail.com">
+                <img alt="" src="http://imgdisk.ru/images/3lZQs.png" /></a>
+            <a href="https://twitter.com/SVolnaya" target="_blank">
+                <img alt="" src="http://imgdisk.ru/images/6ch8v.png" /></a>
+            <a href="http://vk.com/dark_freedom" target="_blank">
+                <img alt="" src="http://imgdisk.ru/images/KZRjQ.png" /></a>
+            <i class="float-eraser"></i>
+        </div>
+    </div>
+</body>
+</html>
